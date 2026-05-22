@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TypeScript</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-light">
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <a class="nav-brand" href="index.html">TypeScript</a>
+                <div class="nav-links">
+                    <a href="problema1.html">Problema 1</a>
+                    <a href="problema2.html">Problema 2</a>
+                    <a href="problema3.html">Problema 3</a>
+                    <a href="problema4.html">Problema 4</a>
+                    <a href="problema5.html">Problema 5</a>
+                    <a href="problema6.html">Problema 6</a>
+                    <a href="problema7.html">Problema 7</a>
+                    <a href="problema8.html">Problema 8</a>
+                    <a href="problema9.html">Problema 9</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container py-5 page-scroll">
+            <section class="bg-white rounded shadow-sm p-4 p-md-5">
+                <h1 class="display-5 fw-bold text-primary">TypeScript</h1>
+                <hr class="mb-4">
+
+                <div class="content-list">
+                    <article class="content-section">
+                        <h2 class="section-title">¿Qué es TypeScript?</h2>
+
+                        <div class="section-body">
+                            <p>TypeScript es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft que amplía las capacidades de JavaScript mediante la incorporación de un sistema de tipado estático, herramientas avanzadas de desarrollo y características orientadas a la programación a gran escala.</p>
+                            <p>TypeScript no reemplaza a JavaScript; en realidad, está construido sobre él. Todo código JavaScript válido también es válido en TypeScript. La principal diferencia es que TypeScript añade una capa de análisis y verificación que permite detectar errores durante el desarrollo antes de ejecutar el programa.</p>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Qué ventajas ofrece TypeScript frente a JavaScript puro?</h2>
+
+                        <div class="section-body">
+                            <p>La ventaja más importante de TypeScript es su sistema de tipado estático. En JavaScript, los errores relacionados con tipos de datos normalmente se descubren durante la ejecución del programa. En cambio, TypeScript detecta muchos de estos errores antes de ejecutar el código, durante la compilación.</p>
+                            <p>TypeScript obliga al desarrollador a definir estructuras más claras y controladas. Esto disminuye errores de lógica, uso incorrecto de variables e incompatibilidades de datos. Gracias a ello, el código es más predecible y robusto.</p>
+                            <p>En proyectos grandes, TypeScript mejora el mantenimiento porque documenta automáticamente tipos, hace más comprensible el propósito de variables y funciones, y facilita localizar errores y modificar funcionalidades.</p>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Cómo se instala TypeScript?</h2>
+
+                        <div class="section-body">
+                            <p>Para instalar TypeScript es necesario contar previamente con Node.js, ya que TypeScript se distribuye mediante npm, el administrador de paquetes incluido con Node.js.</p>
+                            <p>Una vez instalado Node.js, se debe verificar que tanto Node.js como npm funcionen correctamente ejecutando los comandos <code>node -v</code> y <code>npm -v</code>.</p>
+                            <p>La instalación de TypeScript se realiza con el comando <code>npm install -g typescript</code>. Después se recomienda verificar la instalación con <code>tsc -v</code>.</p>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Cómo se compila un archivo TypeScript para convertirlo a JavaScript?</h2>
+
+                        <div class="section-body">
+                            <p>Este proceso es necesario porque los navegadores no ejecutan TypeScript directamente, sino JavaScript.</p>
+                            <p>La compilación se realiza mediante el compilador oficial de TypeScript, conocido como <code>tsc</code>. Para convertir un archivo se usa la terminal con un comando como:</p>
+                            <pre><code>tsc nombreArchivo.ts</code></pre>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Qué extensión de archivo se utiliza para los archivos TypeScript?</h2>
+
+                        <div class="section-body">
+                            <p>Los archivos TypeScript usan la extensión <code>.ts</code>.</p>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Cómo se define un tipo de dato en TypeScript?</h2>
+
+                        <div class="section-body">
+                            <p>En TypeScript los tipos de datos se definen mediante anotaciones de tipo, las cuales indican qué clase de valor puede almacenar una variable, parámetro, función u objeto.</p>
+                            <pre><code>let nombre: string = "Carlos";
+let edad: number = 25;
+let activo: boolean = true;</code></pre>
+                            <pre><code>function sumar(a: number, b: number): number {
+    return a + b;
+}</code></pre>
+                            <pre><code>let numeros: number[] = [1, 2, 3, 4];</code></pre>
+                            <pre><code>interface Persona {
+    nombre: string;
+    edad: number;
+}
+
+let usuario: Persona = {
+    nombre: "Ana",
+    edad: 30
+};</code></pre>
+                            <p>También existe la inferencia de tipos. Por ejemplo, si se escribe <code>let mensaje = "Hola";</code>, TypeScript entiende que la variable es de tipo <code>string</code>.</p>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Qué son los tipos de unión y cómo se declaran?</h2>
+
+                        <div class="section-body">
+                            <p>Los tipos de unión permiten que una variable, parámetro o retorno de función acepte más de un tipo de dato posible.</p>
+                            <pre><code>let id: number | string;
+
+id = 10;
+id = "ABC123";</code></pre>
+                            <p>El símbolo <code>|</code> permite combinar tipos. Esto aporta flexibilidad sin perder el control del tipado.</p>
+                            <pre><code>function imprimir(valor: string | number): void {
+    console.log(valor);
+}</code></pre>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Qué es un tipo literal en TypeScript y para qué se utiliza?</h2>
+
+                        <div class="section-body">
+                            <p>Un tipo literal permite restringir una variable a un valor específico y exacto, en lugar de permitir cualquier valor de un tipo general.</p>
+                            <pre><code>let estado: "activo";
+
+estado = "activo";</code></pre>
+                            <pre><code>let direccion: "izquierda" | "derecha";
+
+direccion = "izquierda";</code></pre>
+                            <p>Esto es útil para controlar estados u opciones limitadas dentro de una aplicación.</p>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Qué son los tipos enumerados (Enums) y cómo se crean?</h2>
+
+                        <div class="section-body">
+                            <p>Los enums permiten definir un conjunto de valores constantes con nombre. Ayudan a representar opciones limitadas y relacionadas dentro de un programa.</p>
+                            <pre><code>enum Color {
+    Rojo,
+    Verde,
+    Azul
+}
+
+let c: Color = Color.Verde;</code></pre>
+                            <pre><code>enum Estado {
+    Activo = "ACTIVO",
+    Inactivo = "INACTIVO",
+    Pendiente = "PENDIENTE"
+}
+
+let estadoActual: Estado = Estado.Activo;</code></pre>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Cómo se define un tipo alias y cuándo es útil?</h2>
+
+                        <div class="section-body">
+                            <p>Un tipo alias crea un nombre personalizado para un tipo de dato. Sirve para reutilizar tipos complejos y mejorar la legibilidad del código.</p>
+                            <pre><code>type ID = number | string;
+
+let usuarioId: ID;
+
+usuarioId = 10;
+usuarioId = "ABC123";</code></pre>
+                            <pre><code>type Usuario = {
+    nombre: string;
+    edad: number;
+    activo: boolean;
+};
+
+let persona: Usuario = {
+    nombre: "Ana",
+    edad: 30,
+    activo: true
+};</code></pre>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Cómo se definen las funciones con tipos en TypeScript?</h2>
+
+                        <div class="section-body">
+                            <p>Las funciones con tipos se definen indicando el tipo de los parámetros y el tipo de valor que la función devuelve.</p>
+                            <pre><code>function sumar(a: number, b: number): number {
+    return a + b;
+}</code></pre>
+                            <pre><code>function mostrarMensaje(mensaje: string): void {
+    console.log(mensaje);
+}</code></pre>
+                            <pre><code>function saludar(nombre: string = "Usuario"): string {
+    return "Hola " + nombre;
+}</code></pre>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Qué son los parámetros opcionales y los parámetros predeterminados en funciones?</h2>
+
+                        <div class="section-body">
+                            <p>Los parámetros opcionales y predeterminados permiten definir funciones más flexibles, sin obligar a enviar todos los valores en cada llamada.</p>
+                            <p>Los parámetros opcionales se indican con <code>?</code> después del nombre del parámetro.</p>
+                            <pre><code>function saludar(nombre?: string): string {
+    return "Hola " + (nombre ?? "invitado");
+}</code></pre>
+                            <p>Los parámetros predeterminados tienen un valor inicial que se usa cuando no se proporciona otro valor.</p>
+                            <pre><code>function crearUsuario(nombre: string = "Usuario"): string {
+    return nombre;
+}</code></pre>
+                        </div>
+                    </article>
+                    <article class="content-section">
+                        <h2 class="section-title">¿Cuáles son algunas mejores prácticas para escribir código limpio y mantenible en TypeScript?</h2>
+
+                        <div class="section-body">
+                            <p>Escribir código limpio y mantenible en TypeScript significa estructurar el proyecto de forma clara, predecible y fácil de escalar, aprovechando el sistema de tipos del lenguaje.</p>
+                            <p>Algunas buenas prácticas son usar tipos claros, evitar el abuso de <code>any</code>, separar responsabilidades, nombrar variables y funciones de forma descriptiva, y mantener funciones pequeñas y fáciles de probar.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const scrollContainer = document.querySelector(".page-scroll");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(({ isIntersecting, target }) => {
+                    if (isIntersecting) {
+                        target.classList.add("visible");
+                    }
+                });
+            }, {
+                root: scrollContainer,
+                threshold: 0.2
+            });
+
+            document.querySelectorAll("p").forEach((paragraph) => {
+                paragraph.classList.add("scroll-reveal");
+                observer.observe(paragraph);
+            });
+        </script>
+    </body>
+</html>
