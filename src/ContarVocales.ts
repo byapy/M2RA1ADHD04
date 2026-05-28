@@ -2,7 +2,7 @@ export class ContarVocales{
 
     private texto:string = ""; //Texto que ingresa la persona
     private contar:number = 0;
-    private vocales:string = "aeiouAEIOUáéíóúÁÉÍÓÚ" //Caracteres a verificar
+    private vocales:string = "aeiouAEIOUáéíóúÁÉÍÓÚüÜ" //Caracteres a verificar
 
     
     public getTexto():string{
