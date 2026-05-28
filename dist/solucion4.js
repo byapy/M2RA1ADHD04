@@ -4,6 +4,7 @@ const numero2 = document.getElementById("numMayorMenor2");
 const numero3 = document.getElementById("numMayorMenor3");
 const div = document.getElementById("divResultado");
 const boton = document.getElementById("btnMayorMenor");
+const formulario = boton.closest("form");
 function mostrarMenorOmayor() {
     let numerito1 = parseFloat(numero1.value);
     let numerito2 = parseFloat(numero2.value);
@@ -15,3 +16,7 @@ function mostrarMenorOmayor() {
     div.innerHTML = "Menor: " + numeros[0] + " Medio: " + numeros[1] + " Mayor: " + numeros[2];
 }
 boton.addEventListener("click", mostrarMenorOmayor);
+formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
+    mostrarMenorOmayor();
+});
